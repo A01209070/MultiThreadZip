@@ -69,9 +69,11 @@ public class Unzip
     }
 	
 	public static void main(String[] args) throws IOException {
-        String[] myFiles = { "C:/Users/anira/Desktop/Documentos.zip" , "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.zip", "C:/Users/anira/Desktop/Componente1.zip"};
-		String[] zipFile = {  "C:/Users/anira/Desktop/Documentos", "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION", "C:/Users/anira/Desktop/Componente1"};
+        String[] myFiles = { "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.zip", "C:/Users/anira/Desktop/Componente1.zip", "C:/Users/anira/Desktop/Documentos.zip" }; //
+		String[] zipFile = { "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION", "C:/Users/anira/Desktop/Componente1", "C:/Users/anira/Desktop/Documentos" }; //
 		
+		//String[] myFiles = { "C:/Users/anira/Desktop/ZipAll.zip"};
+		//String[] zipFile = { "C:/Users/anira/Desktop/UnzipAll" };
 		Unzip unzipper = new Unzip();
 		
 		//Initialize the timer for the execution

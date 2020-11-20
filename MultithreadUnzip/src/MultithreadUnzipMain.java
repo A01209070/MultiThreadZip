@@ -11,9 +11,6 @@ public class MultithreadUnzipMain {
 	public static void main(String args[]) throws FileNotFoundException, IOException, InterruptedException {
 		String[] myFiles = { "C:/Users/anira/Desktop/Documentos.zip" , "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.zip", "C:/Users/anira/Desktop/Componente1.zip"};
 		String[] zipFile = {  "C:/Users/anira/Desktop/Documentos", "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION", "C:/Users/anira/Desktop/Componente1"};
-		//C:\Users\anira\Desktop\Pruebas\Results
-		
-		
 		
 		// Thread pool with MAX_THREADS number of threads as the fixed pool size(Step 2) 
 	    ExecutorService pool = Executors.newFixedThreadPool(MAX_THREADS);   

@@ -12,6 +12,8 @@ public class MultithreadZipMain {
 	public static void main(String args[]) throws FileNotFoundException, IOException, InterruptedException {
 		//C:\Users\anira\Desktop\Pruebas\Results
 		
+		/*
+		 * General implementation
 		int numFiles;
 		System.out.print("Introduce the Number of Files to Zip: ");
 		Scanner sc = new Scanner(System.in);
@@ -35,6 +37,23 @@ public class MultithreadZipMain {
 		}
 		
 		//Avoid receiving new tasks
-		pool.shutdown();	
+		pool.shutdown();
+		*/
+		
+		//Test implementation for the class
+		String[] myFiles = {  "C:/Users/anira/Desktop/Documentos.pdf", "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.pdf", "C:/Users/anira/Desktop/Componente1.cs"};
+		String[] zipFile = { "C:/Users/anira/Desktop/Documentos.zip" , "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.zip", "C:/Users/anira/Desktop/Componente1.zip"};
+		
+		// Thread pool with MAX_THREADS number of threads as the fixed pool size(Step 2) 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREADS);   
+
+		for(int i = 0; i < myFiles.length; i++) {
+			//Pass the runnable object to the pool to execute
+			pool.execute(new MultithreadZip(myFiles[i], zipFile[i]));
+		}
+		
+		//Avoid receiving new tasks
+		pool.shutdown();
+		
 	}
 }

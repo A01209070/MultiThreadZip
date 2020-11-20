@@ -107,6 +107,7 @@ public class Zip {
 		//C:\Users\anira\Desktop\Pruebas\SequantialResults\ZipAll.zip
 		Zip zip = new Zip();
 		
+		/* General Implementation
 		int numFiles;
 		System.out.print("Introduce the Number of Files to Zip: ");
 		Scanner sc = new Scanner(System.in);
@@ -118,6 +119,21 @@ public class Zip {
 		}
 		System.out.println("Introduce the Absolute Path of the Destination Folder of All Files to Zip: ");
 		String zipFile = sc.next();
+		
+		long start = System.currentTimeMillis();
+		try {
+			zip.zip(myFiles, zipFile);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		float seconds = (System.currentTimeMillis() - start) / 1000f;
+		System.out.println("The zipping time was: " + seconds + " seconds.");
+		System.out.println("Completed Successfully");
+		*/
+		
+		//Test implementation for the class
+		String[] myFiles = {  "C:/Users/anira/Desktop/Documentos.pdf", "C:/Users/anira/Desktop/CERTIFICATEOFCOMPLETION.pdf", "C:/Users/anira/Desktop/Componente1.cs"};
+		String zipFile =  "C:/Users/anira/Desktop/ZipAll.zip" ;
 		
 		long start = System.currentTimeMillis();
 		try {
